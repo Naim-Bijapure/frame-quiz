@@ -72,9 +72,6 @@ export function fetchData(connectedAddress: string): any {
   const fetchData = async () => {
     try {
       const apiUrl = `${process.env.NEXT_PUBLIC_APP_API_URL}/frames/list/${connectedAddress}`;
-
-      console.log(apiUrl);
-
       const response = await fetch(apiUrl);
       if (!response.ok) {
         throw new Error(`API request failed with status ${response.status}`);
@@ -328,7 +325,7 @@ const Dashboard = () => {
                     <div>You havent created any Frames yet. </div>
                   </div>
                 ) : (
-                  <div>You havent created any Frames yet. </div>
+                  <div>You havent created any Frames yet.</div>
                 )}
               </div>
             </div>
